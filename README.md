@@ -135,7 +135,6 @@ That starts a local server that will allow you to preview your blog as you write
 ###Now let's deploy! 
 All you need to do is enter these two commands,
 ```sh
-  git config branch.master.remote origin
   rake generate
   rake deploy
 ```
