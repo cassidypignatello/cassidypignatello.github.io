@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Burning the Candle At Both Ends
+subtitle: A Smooth Sea Never Made a Skillful Sailor
+author: Cassidy Pignatello
 simple_search: https://www.google.com/search
-description:
+description: # A technical blog discussing my journey learning through Ruby at the Flatiron School.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
