@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Zero-based&nbsp;numbering | Not Not Awesome]]></title>
+  <link href="http://cassidypignatello.github.io/blog/categories/zero-based-numbering/atom.xml" rel="self"/>
+  <link href="http://cassidypignatello.github.io/"/>
+  <updated>2014-06-11T00:31:14-04:00</updated>
+  <id>http://cassidypignatello.github.io/</id>
+  <author>
+    <name><![CDATA[Cassidy Pignatello]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My Zeroth Post]]></title>
+    <link href="http://cassidypignatello.github.io/blog/2014/06/10/my-first-post-on-octopress/"/>
+    <updated>2014-06-10T10:42:32-04:00</updated>
+    <id>http://cassidypignatello.github.io/blog/2014/06/10/my-first-post-on-octopress</id>
+    <content type="html"><![CDATA[<p>Thanks for stumbling across my zeroth post on my very zeroth blog. Why zeroth? We&rsquo;ll get to that in just a little bit.</p>
+
+<!--more-->
+
+
+<p>Since starting the RUBY-005 class at Flatiron School, we&rsquo;ve been beginning lecture by focusing on a different programmer each day and discussing their contributions to computing. My favorite so far has definitely been <a href="http://en.wikipedia.org/wiki/Edsger_Dijkstra" target="_blank">Edsger Dijkstra</a>. Besides him being the father of structured programming (something I am immensely grateful for), I found his sense of humor to be incredibly refreshing. Here are a couple of my favorite quotes of his below:</p>
+
+<p><em>&ldquo;About the use of language: it is impossible to sharpen a pencil with a blunt axe. It is equally vain to try to do it with ten blunt axes instead.&rdquo;</em></p>
+
+<p><em>&ldquo;It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration.&rdquo;</em></p>
+
+<p>Wow, harsh. Pretty much the entirety of my experience with BASIC centered around playing the QBasic game <a href="http://en.wikipedia.org/wiki/Gorillas_(video_game)" target="_blank">Gorillas</a> when I was in elementary school. That statement alone makes me happy I never took my curiousity further than that.</p>
+
+<p>One of the first hang-ups I had as a coding beginner was the concept of zero-based numbering; that the first element in a given array has an index of 0, not 1. It was really more of a minor annoyance than anything else &ndash; everything I had encountered up until this point began with a count of 1, and the habit of thinking in that manner found me making the same mistakes in my code over and over again.</p>
+
+<p>Dijkstra argued in favor of zero-based numbering in a <a href="http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html" target="_blank">paper</a> he wrote while at the University of Texas. I still can&rsquo;t say I completely agree with the use of it semantically, but it was very interesting to gain a new perspective on how it makes sense from a mathematical standpoint.</p>
+
+<p>His argument centers around the idea that expressing the range of a<br> variable <strong>i</strong> as <strong>x &lt;= i &lt; y</strong> offers advantages over any other combination of inequalities. Besides his belief that zero is the smallest natural number, I found the following reasons to be the most compelling for its usage:</p>
+
+<p>&bull; In some tasks it&rsquo;s useful to ask <em>&ldquo;How many values occured <strong>i</strong> times?</em>&rdquo; Placing such values in an array requires beginning the indices at 0; in the case one has the possibility that some values occurred zero times.</p>
+
+<p>&bull; Consecutive ranges have matching end-points:
+<strong>x &lt;= i &lt; y</strong> followed by <strong>y &lt;= i &lt; z</strong> yields <strong>x &lt;= i &lt; z</strong>.</p>
+
+<p>&bull; The length of the range is the difference of its endpoints:
+<strong>0 &lt;= i &lt; 10</strong> has ten elements, as does <strong>5 &lt;= i &lt; 15</strong>.</p>
+
+<p>&bull; In iterative algorithms that count from zero, the current
+value of the count always equals the number of previous
+iterations.</p>
+
+<p>&bull; For a zero-origin array, the index indicates the
+displacement from the origin.</p>
+
+<p>I believe that the language should adapt to the user when at all possible, not the other way around. However, Dijkstra makes a lot of points that are very difficult to counter. At least for my decidedly un-mathy brain.</p>
+]]></content>
+  </entry>
+  
+</feed>
