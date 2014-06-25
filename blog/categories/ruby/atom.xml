@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ruby | Hi! I'm Cassidy Pignatello]]></title>
+  <title><![CDATA[Category: Ruby | Cassidy Pignatello]]></title>
   <link href="http://cassidypignatello.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://cassidypignatello.github.io/"/>
-  <updated>2014-06-24T21:57:32-04:00</updated>
+  <updated>2014-06-25T00:30:54-04:00</updated>
   <id>http://cassidypignatello.github.io/</id>
   <author>
     <name><![CDATA[Cassidy Pignatello]]></name>
@@ -67,7 +67,7 @@ end</p>
 
 <p>```</p>
 
-<p>Another way you could do this is to define a method within the <code>Class</code> instance itself. This uses the keyword <code>self</code> to open up a new context where the <code>Class</code> instance is held in <code>self</code>.</p>
+<p>Another way you could do this is to define a method within the <code>Class</code> instance itself. This uses the keyword <code>self</code> to open up a new context where the <code>Class</code> instance is held in <code>self</code>:</p>
 
 <p>```ruby
 class Vagabond
