@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Self | Hi! I'm Cassidy Pignatello]]></title>
+  <link href="http://cassidypignatello.github.io/blog/categories/self/atom.xml" rel="self"/>
+  <link href="http://cassidypignatello.github.io/"/>
+  <updated>2014-06-24T21:57:32-04:00</updated>
+  <id>http://cassidypignatello.github.io/</id>
+  <author>
+    <name><![CDATA[Cassidy Pignatello]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Self, the Vagabond of Ruby]]></title>
+    <link href="http://cassidypignatello.github.io/blog/2014/06/24/self/"/>
+    <updated>2014-06-24T20:52:44-04:00</updated>
+    <id>http://cassidypignatello.github.io/blog/2014/06/24/self</id>
+    <content type="html"><![CDATA[<p>A few weeks ago in my Ruby class, we were introduced to the concept of <code>self</code>. This can be particularly challenging to wrap your head around, especially if you&rsquo;re new to programming in general.</p>
+
+<!--more-->
+
+
+<p>An important thing to understand right off the bat is that every line of code in Ruby is executed against a particular <code>self</code>. A method call is always sending a message to a reciever. The <code>self</code> keyword gives you access to the current object &ndash; in other words, the object that is currently recieving the message. To further illustrate, I&rsquo;ve outlined a couple use cases for when you&rsquo;d want to use <code>self</code>.</p>
+
+<h2>Class Methods</h2>
+
+<p>Probably the most common usage of <code>self</code> is when defining class methods. Using the <code>def</code> keyword inside of a class will create a new instance method:</p>
+
+<p>```ruby
+class Vagabond
+  attr_writer :home</p>
+
+<p>  def print_home</p>
+
+<pre><code>puts "My home is #{@home}"
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>v = Vagabond.new
+v.home = &ldquo;nowhere, I like to wander around.&rdquo;
+v.print_home</p>
+
+<h1>=> &ldquo;My home is nowhere, I like to wander around.&rdquo;</h1>
+
+<p>```</p>
+
+<p>Within a class, <code>self</code> refers to the current Class (in this case <code>Vagabond</code>), which is itself an instance of the class <code>Class</code>. I know, bear with me here. Defining a method on <code>self</code> then creates a class method:</p>
+
+<p>```ruby
+class Vagabond
+  def self.print_home</p>
+
+<pre><code>puts "My home is nowhere, I like to wander around."
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>Vagabond.print_home</p>
+
+<h1>=> &ldquo;My home is nowhere, I like to wander around.&rdquo;</h1>
+
+<p>```</p>
+
+<p>Another way you could do this is to define a method within the <code>Class</code> instance itself. This uses the keyword <code>self</code> to open up a new context where the <code>Class</code> instance is held in <code>self</code>.</p>
+
+<p>```ruby
+class Vagabond
+  class &lt;&lt; self</p>
+
+<pre><code>def print_home
+  puts "My home is nowhere, I like to wander around."
+end
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>Vagabond.print_home</p>
+
+<h1>=> &ldquo;My home is nowhere, I like to wander around.&rdquo;</h1>
+
+<p>```</p>
+
+<h2>Disambiguation</h2>
+
+<p>Another case in which <code>self</code> is especially useful is when assigning a value to an object&rsquo;s attributes:</p>
+
+<p>```ruby
+class Book
+  attr_accessor :title</p>
+
+<p>  def replace_title(new_title)</p>
+
+<pre><code>title = new_title
+</code></pre>
+
+<p>  end</p>
+
+<p>  def print_title</p>
+
+<pre><code>puts title
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>b = Book.new
+b.title = &ldquo;Still Life With Woodpecker&rdquo;
+b.replace_title(&ldquo;Jitterbug Perfume&rdquo;)
+b.print_title</p>
+
+<h1>=> &ldquo;Still Life With Woodpecker&rdquo;</h1>
+
+<p>```</p>
+
+<p>Although we replaced the book title with &ldquo;Jitterbug Perfume&rdquo;, it remained set to &ldquo;Still Life With Woodpecker&rdquo; &ndash; which is what we see when we call <code>print_title</code>. That&rsquo;s because the assignment inside <code>replace_title</code> is assigned to a local variable called <code>title</code>, which isn&rsquo;t being used for anything. If we were to change line 5 to <code>self.title = new_title</code>, then the method call would return &ldquo;Jitterbug Perfume&rdquo; as was expected. It&rsquo;s not necessary to use <code>self.title</code> explicitly inside the method <code>print_title</code>, because Ruby is smart enough to know that there&rsquo;s no local variable with that name and will then send <code>self</code> the message <code>title</code>. Remember how I mentioned that a method call always sends a message to a reciever? Well, <code>self</code> can also be defined as an implicit reciever. That is, if you call a method without an explicit recieving object, the method is implicitly called on <code>self</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>

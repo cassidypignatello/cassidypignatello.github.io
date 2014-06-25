@@ -1,24 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Hi! I'm Cassidy Pignatello]]></title>
-  <link href="http://cassidypignatello.github.io/atom.xml" rel="self"/>
-  <link href="http://cassidypignatello.github.io/"/>
-  <updated>2014-06-24T21:57:32-04:00</updated>
-  <id>http://cassidypignatello.github.io/</id>
-  <author>
-    <name><![CDATA[Cassidy Pignatello]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Self, the Vagabond of Ruby - Hi! I'm Cassidy Pignatello</title>
+  <meta name="author" content="Cassidy Pignatello">
 
   
-  <entry>
-    <title type="html"><![CDATA[Self, the Vagabond of Ruby]]></title>
-    <link href="http://cassidypignatello.github.io/blog/2014/06/24/self/"/>
-    <updated>2014-06-24T20:52:44-04:00</updated>
-    <id>http://cassidypignatello.github.io/blog/2014/06/24/self</id>
-    <content type="html"><![CDATA[<p>A few weeks ago in my Ruby class, we were introduced to the concept of <code>self</code>. This can be particularly challenging to wrap your head around, especially if you&rsquo;re new to programming in general.</p>
+  <meta name="description" content="Self, the Vagabond of Ruby written Jun 24th, 2014 in Metaprogramming, Ruby, Self A few weeks ago in my Ruby class, we were introduced to the concept &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://cassidypignatello.github.io/blog/2014/06/24/self">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hi! I'm Cassidy Pignatello" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Self, the Vagabond of Ruby</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-06-24T20:52:44-04:00" pubdate data-updated="true">Jun 24<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/metaprogramming/'>Metaprogramming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/self/'>Self</a>
+  
+</span>
+
+
+        </div>
+        <p>A few weeks ago in my Ruby class, we were introduced to the concept of <code>self</code>. This can be particularly challenging to wrap your head around, especially if you&rsquo;re new to programming in general.</p>
 
 <!--more-->
 
@@ -144,50 +196,53 @@
 
 
 <p>Although we replaced the book title with &ldquo;Jitterbug Perfume&rdquo;, it remained set to &ldquo;Still Life With Woodpecker&rdquo; &ndash; which is what we see when we call <code>print_title</code>. That&rsquo;s because the assignment inside <code>replace_title</code> is assigned to a local variable called <code>title</code>, which isn&rsquo;t being used for anything. If we were to change line 5 to <code>self.title = new_title</code>, then the method call would return &ldquo;Jitterbug Perfume&rdquo; as was expected. It&rsquo;s not necessary to use <code>self.title</code> explicitly inside the method <code>print_title</code>, because Ruby is smart enough to know that there&rsquo;s no local variable with that name and will then send <code>self</code> the message <code>title</code>. Remember how I mentioned that a method call always sends a message to a reciever? Well, <code>self</code> can also be defined as an implicit reciever. That is, if you call a method without an explicit recieving object, the method is implicitly called on <code>self</code>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My Zeroth Post]]></title>
-    <link href="http://cassidypignatello.github.io/blog/2014/06/10/my-first-post-on-octopress/"/>
-    <updated>2014-06-10T10:42:32-04:00</updated>
-    <id>http://cassidypignatello.github.io/blog/2014/06/10/my-first-post-on-octopress</id>
-    <content type="html"><![CDATA[<p>Thanks for stumbling across my zeroth post on my very zeroth blog. Why zeroth? We&rsquo;ll get to that in just a little bit.</p>
 
-<!--more-->
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/06/10/my-first-post-on-octopress/" title="Previous Post: My Zeroth Post">&laquo; Previous: My Zeroth Post</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+
+    
+
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
 
 
-<p>Since starting the RUBY-005 class at Flatiron School, we&rsquo;ve been beginning lecture by focusing on a different programmer each day and discussing their contributions to computing. My favorite so far has definitely been <a href="http://en.wikipedia.org/wiki/Edsger_Dijkstra" target="_blank">Edsger Dijkstra</a>. Besides him being the father of structured programming (something I am immensely grateful for), I found his sense of humor to be incredibly refreshing. Here are a couple of my favorite quotes of his below:</p>
+    </div>
+  </div>
+</footer>
 
-<p><em>&ldquo;About the use of language: it is impossible to sharpen a pencil with a blunt axe. It is equally vain to try to do it with ten blunt axes instead.&rdquo;</em></p>
-
-<p><em>&ldquo;It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration.&rdquo;</em></p>
-
-<p>Wow, harsh. Pretty much the entirety of my experience with BASIC centered around playing the QBasic game <a href="http://en.wikipedia.org/wiki/Gorillas_(video_game)" target="_blank">Gorillas</a> when I was in elementary school. That statement alone makes me happy I never took my curiousity further than that.</p>
-
-<p>One of the first hang-ups I had as a coding beginner was the concept of zero-based numbering; that the first element in a given array has an index of 0, not 1. It was really more of a minor annoyance than anything else &ndash; everything I had encountered up until this point began with a count of 1, and the habit of thinking in that manner found me making the same mistakes in my code over and over again.</p>
-
-<p>Dijkstra argued in favor of zero-based numbering in a <a href="http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html" target="_blank">paper</a> he wrote while at the University of Texas. I still can&rsquo;t say I completely agree with the use of it semantically, but it was very interesting to gain a new perspective on how it makes sense from a mathematical standpoint.</p>
-
-<p>His argument centers around the idea that expressing the range of a<br> variable <strong>i</strong> as <strong>x &lt;= i &lt; y</strong> offers advantages over any other combination of inequalities. Besides his belief that zero is the smallest natural number, I found the following reasons to be the most compelling for its usage:</p>
-
-<p>&bull; In some tasks it&rsquo;s useful to ask <em>&ldquo;How many values occured <strong>i</strong> times?</em>&rdquo; Placing such values in an array requires beginning the indices at 0; in the case one has the possibility that some values occurred zero times.</p>
-
-<p>&bull; Consecutive ranges have matching end-points:
-<strong>x &lt;= i &lt; y</strong> followed by <strong>y &lt;= i &lt; z</strong> yields <strong>x &lt;= i &lt; z</strong>.</p>
-
-<p>&bull; The length of the range is the difference of its endpoints:
-<strong>0 &lt;= i &lt; 10</strong> has ten elements, as does <strong>5 &lt;= i &lt; 15</strong>.</p>
-
-<p>&bull; In iterative algorithms that count from zero, the current
-value of the count always equals the number of previous
-iterations.</p>
-
-<p>&bull; For a zero-origin array, the index indicates the
-displacement from the origin.</p>
-
-<p>I believe that the language should adapt to the user when at all possible, not the other way around. However, Dijkstra makes a lot of points that are very difficult to counter. At least for my decidedly un-mathy brain.</p>
-]]></content>
-  </entry>
-  
-</feed>
+  </body>
+</html>
