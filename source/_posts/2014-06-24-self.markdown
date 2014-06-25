@@ -1,0 +1,84 @@
+---
+layout: post
+title: "Self, the Vagabond of Ruby"
+date: 2014-06-24 20:52:44 -0400
+comments: true
+categories: Self Ruby Metaprogramming
+---
+
+A few weeks ago in my Ruby class, we were introduced to the concept of `self`. This can be particularly challenging to wrap your head around, especially if you're new to programming in general.
+<!--more-->
+An important thing to understand right off the bat is that every line of code in Ruby is executed against a particular `self`. A method call is always sending a message to a reciever. The `self` keyword gives you access to the current object - in other words, the object that is currently recieving the message. To further illustrate, I've outlined a couple use cases for when you'd want to use `self`.
+
+## Class Methods
+
+Probably the most common usage of `self` is when defining class methods. Using the `def` keyword inside of a class will create a new instance method:
+
+```ruby
+class Vagabond
+  attr_writer :home
+
+  def print_home
+    puts "My home is #{@home}"
+  end
+end
+
+v = Vagabond.new
+v.home = "nowhere, I like to wander around."
+v.print_home
+#=> "My home is nowhere, I like to wander around."
+```
+
+Within a class, `self` refers to the current Class (in this case `Vagabond`), which is itself an instance of the class `Class`. I know, bear with me here. Defining a method on `self` then creates a class method:
+
+```ruby
+class Vagabond
+  def self.print_home
+    puts "My home is nowhere, I like to wander around."
+  end
+end
+
+Vagabond.print_home
+#=> "My home is nowhere, I like to wander around."    
+```
+
+Another way you could do this is to define a method within the `Class` instance itself. This uses the keyword `self` to open up a new context where the `Class` instance is held in `self`.
+
+```ruby
+class Vagabond
+  class << self
+    def print_home
+      puts "My home is nowhere, I like to wander around."
+    end
+  end
+end
+
+Vagabond.print_home
+#=> "My home is nowhere, I like to wander around."
+```
+
+## Disambiguation
+
+Another case in which `self` is especially useful is when assigning a value to an object's attributes:
+
+```ruby
+class Book
+  attr_accessor :title
+
+  def replace_title(new_title)
+    title = new_title
+  end
+
+  def print_title
+    puts title
+  end
+end
+
+b = Book.new
+b.title = "Still Life With Woodpecker"
+b.replace_title("Jitterbug Perfume")
+b.print_title
+#=> "Still Life With Woodpecker"
+```
+
+Although we replaced the book title with "Jitterbug Perfume", it remained set to "Still Life With Woodpecker" - which is what we see when we call `print_title`. That's because the assignment inside `replace_title` is assigned to a local variable called `title`, which isn't being used for anything. If we were to change line 5 to `self.title = new_title`, then the method call would return "Jitterbug Perfume" as was expected. It's not necessary to use `self.title` explicitly inside the method `print_title`, because Ruby is smart enough to know that there's no local variable with that name and will then send `self` the message `title`. Remember how I mentioned that a method call always sends a message to a reciever? Well, `self` can also be defined as an implicit reciever. That is, if you call a method without an explicit recieving object, the method is implicitly called on `self`.
