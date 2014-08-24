@@ -42,7 +42,7 @@ Vagabond.print_home
 #=> "My home is nowhere, I like to wander around."    
 ```
 
-Another way you could do this is to define a method within the `Class` instance itself. This uses the keyword `self` to open up a new context where the `Class` instance is held in `self`.
+Another way you could do this is to define a method within the `Class` instance itself. This uses the keyword `self` to open up a new context where the `Class` instance is held in `self`:
 
 ```ruby
 class Vagabond
