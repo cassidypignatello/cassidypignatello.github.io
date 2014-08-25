@@ -4,10 +4,10 @@
 
 url: http://cassidypignatello.github.io
 title: Cassidy Pignatello
-subtitle: a developer and musician living in Brooklyn
+subtitle: 
 author: Cassidy Pignatello
 simple_search: https://www.google.com/search
-description: # A technical blog discussing my journey learning Ruby at the Flatiron School.
+description: A technical blog discussing my journey learning Ruby and Rails at the Flatiron School.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
