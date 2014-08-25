@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>What Beer Can Teach You About Recursion - Cassidy Pignatello</title>
+  <meta name="author" content="Cassidy Pignatello">
+
+  
+  <meta name="description" content="What Beer Can Teach You About Recursion written Aug 24th, 2014 in Algorithms, Computer&nbsp;Science, Flatiron&nbsp;School, Recursion As the semester &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://cassidypignatello.github.io/blog/2014/08/24/what-beer-can-teach-you-about-recursion">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Cassidy Pignatello" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>What Beer Can Teach You About Recursion</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-24T20:27:23-04:00" pubdate data-updated="true">Aug 24<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/algorithms/'>Algorithms</a>, <a class='category' href='/blog/categories/computer-science/'>Computer&nbsp;Science</a>, <a class='category' href='/blog/categories/flatiron-school/'>Flatiron&nbsp;School</a>, <a class='category' href='/blog/categories/recursion/'>Recursion</a>
+  
+</span>
+
+
+        </div>
+        <p>As the semester at The Flatiron School wraps up, we&rsquo;ve been practicing how to solve some pretty common computer science problems that might come up in a technical interview. While these problems can be pretty intimidating at first, one of the best ways to approach them is by breaking them down into smaller pieces that can then be combined to give a solution to the original problem.</p>
+
+<!--more-->
+
+
+<p>This is typically called a divide and conquer (or D&amp;C) algorithm, and works by using recursion. I thought it&rsquo;d be helpful to demonstrate one of the simplest implementations of a recursive method that I&rsquo;ve come across, since some of the examples out there might be overwhelming to an absolute beginner. Before we get into that, let&rsquo;s define what an algorithm and recursion actually are.</p>
+
+<h2>Definitions</h2>
+
+<p>An <strong>algorithm</strong> is a step-by-step set of instructions for solving a problem, while <strong>recursion</strong> is a function that calls itself. You&rsquo;re essentially creating a loop, and there are plenty of arguments out there for why it makes more sense to use an iterator to solve a problem. Recursion is still extremely valuble to learn in that it will help you to understand how looping works.</p>
+
+<h2>Components of Recursive Algorithms</h2>
+
+<p>When setting up a recursive algorithm, it&rsquo;s essential to define two things. A <strong>recursive case</strong> that will initiate the recursion, and a <strong>base case</strong> that will break the recursion. If you forget to do that, you&rsquo;ll most likely see a <strong>stack level too deep</strong> or <strong>stack overflow</strong> error. This means either your base case was incorrectly defined, or you ran out of memory.</p>
+
+<h2>Implementing a Recursive Algorithm</h2>
+
+<p>Okay, now that we&rsquo;ve got that out of the way, let&rsquo;s solve a problem. We&rsquo;re going to define a recursive algorithm called <code>bottles_of_beer</code> that takes a number as an argument and prints the number of bottles of beer we have until there aren&rsquo;t any left. Of course, we&rsquo;ll be doing this in the style of a classic song:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">bottles_of_beer</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="c1"># base case for breaking the recursion</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;No more bottles of beer on the wall!&quot;</span>
+</span><span class='line'>  <span class="k">else</span> <span class="c1"># recursive case for triggering the recursion</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">n</span><span class="si">}</span><span class="s2"> bottles of beer on the wall, </span><span class="si">#{</span><span class="n">n</span><span class="si">}</span><span class="s2"> bottles of beer. Take one down and pass it around, </span><span class="si">#{</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2"> bottles of beer on the wall.&quot;</span>
+</span><span class='line'>    <span class="n">bottles_of_beer</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So we&rsquo;ve defined a method above that takes a number <code>n</code> as an argument. If <code>n</code> is equal to 0, we break our recursion and print the corresponding statement. Otherwise, we trigger the recursion, print a different statement, and then subtract 1 from <code>n</code>, thereby passing that new <code>n</code> in as our argument to call <code>bottles_of_beer</code> again.</p>
+
+<p>Why don&rsquo;t you open up <code>irb</code> and try it out? I promise it&rsquo;ll make that beer (or sparkling apple juice) you have afterwards that much sweeter.</p>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/06/24/self/" title="Previous Post: Self, the Vagabond of Ruby">&laquo; Previous: Self, the Vagabond of Ruby</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/itscassidy"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/cassidypignatello"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="mailto:cassidy.pignatello@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
