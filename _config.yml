@@ -4,7 +4,7 @@
 
 url: http://cassidypignatello.github.io
 title: Cassidy Pignatello
-subtitle: Blogging about the technical things
+subtitle: Blogging about all the technical things
 author: Cassidy Pignatello
 simple_search: https://www.google.com/search
 description: I'm a musician, web developer, recent Flatiron School grad, and proponent of solid hangs. I live in Brooklyn with a friend and his cat who hates me for no good reason. 
@@ -98,3 +98,6 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: true
+
+# LinkedIn
+linkedin_user: cassidypignatello
