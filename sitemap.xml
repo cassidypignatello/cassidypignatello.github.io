@@ -2,32 +2,38 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://cassidypignatello.github.io/blog/2014/06/10/my-first-post-on-octopress/</loc>
-        <lastmod>2014-06-24T20:24:05-04:00</lastmod>
+        <lastmod>2014-09-25T18:38:23-04:00</lastmod>
     </url>
     <url>
         <loc>http://cassidypignatello.github.io/blog/2014/06/24/self/</loc>
-        <lastmod>2014-08-24T21:57:35-04:00</lastmod>
+        <lastmod>2014-10-01T16:33:02-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://cassidypignatello.github.io/blog/2014/08/24/what-beer-can-teach-you-about-recursion/
         </loc>
-        <lastmod>2014-08-24T21:57:35-04:00</lastmod>
+        <lastmod>2014-09-25T18:38:23-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://cassidypignatello.github.io/blog/2014/09/25/integrating-stripe-into-your-rails-app/
+        </loc>
+        <lastmod>2014-10-01T16:32:03-04:00</lastmod>
     </url>
     <url>
         <loc>http://cassidypignatello.github.io/blog/archives/</loc>
-        <lastmod>2014-08-24T21:57:35-04:00</lastmod>
+        <lastmod>2014-10-01T16:33:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://cassidypignatello.github.io/</loc>
-        <lastmod>2014-08-24T21:57:35-04:00</lastmod>
+        <lastmod>2014-10-01T16:33:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://cassidypignatello.github.io/posts/</loc>
-        <lastmod>2014-08-24T21:57:35-04:00</lastmod>
+        <lastmod>2014-10-01T16:33:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://cassidypignatello.github.io/robots.txt</loc>
-        <lastmod>2014-06-09T11:07:33-04:00</lastmod>
+        <lastmod>2014-09-25T18:38:23-04:00</lastmod>
     </url>
 </urlset>

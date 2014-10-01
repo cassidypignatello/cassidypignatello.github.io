@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Stripe | Cassidy Pignatello]]></title>
+  <link href="http://cassidypignatello.github.io/blog/categories/stripe/atom.xml" rel="self"/>
+  <link href="http://cassidypignatello.github.io/"/>
+  <updated>2014-10-01T16:36:20-04:00</updated>
+  <id>http://cassidypignatello.github.io/</id>
+  <author>
+    <name><![CDATA[Cassidy Pignatello]]></name>
+    <email><![CDATA[cassidy.pignatello@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Stripe Into Your Rails App]]></title>
+    <link href="http://cassidypignatello.github.io/blog/2014/09/25/integrating-stripe-into-your-rails-app/"/>
+    <updated>2014-09-25T18:53:11-04:00</updated>
+    <id>http://cassidypignatello.github.io/blog/2014/09/25/integrating-stripe-into-your-rails-app</id>
+    <content type="html"><![CDATA[<p>About a month ago, I gave a technical talk at The Flatiron School along with <a href="http://www.twitter.com/zackshp" target="_blank">Zack Sheppard</a> and <a href="http://www.twitter.com/dsully360" target="_blank">Daniel Sullivan</a> about <a href="https://stripe.com/" target="_blank">Stripe</a>. Stripe is a really powerful and simplified way to implement a payments infrastructure and checkout functionality into your application.<!--more-->
+In addition to it being easy to add payment forms through Stripe Checkout, it&rsquo;s also completely secure. They have fraud protection, PCI Service Provider Level 1 certification, and optional two-factor authentication. Even if someone does manage to hack into your application, you&rsquo;re never actually storing any of your customer&rsquo;s credit card information. I could go on and on, but that would probably ruin the whole point of showing you the video, right? Take a look below for our presentation on why Stripe is useful, and how we integrated it into <a href="https://github.com/cassidypignatello/laser-spirit">Laser Spirit</a> &ndash; a Rails engine we created as a simplified e-commerce platform to mount onto your host application, a la Shopify or Spree.</p>
+
+<p>Password: <strong>summer2014</strong>
+<div class="embed-video-container"><iframe src="//player.vimeo.com/video/104331278 "></iframe></div></p>
+
+<p>Thanks for watching!</p>
+]]></content>
+  </entry>
+  
+</feed>

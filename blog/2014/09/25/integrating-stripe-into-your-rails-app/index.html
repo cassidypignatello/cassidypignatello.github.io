@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Integrating Stripe Into Your Rails App - Cassidy Pignatello</title>
+  <meta name="author" content="Cassidy Pignatello">
+
+  
+  <meta name="description" content="Integrating Stripe Into Your Rails App written Sep 25th, 2014 in E-commerce, Flatiron&nbsp;School, Rails, Stripe About a month ago, I gave a &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://cassidypignatello.github.io/blog/2014/09/25/integrating-stripe-into-your-rails-app">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Cassidy Pignatello" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Integrating Stripe Into Your Rails App</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-25T18:53:11-04:00" pubdate data-updated="true">Sep 25<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/e-commerce/'>E-commerce</a>, <a class='category' href='/blog/categories/flatiron-school/'>Flatiron&nbsp;School</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/stripe/'>Stripe</a>
+  
+</span>
+
+
+        </div>
+        <p>About a month ago, I gave a technical talk at The Flatiron School along with <a href="http://www.twitter.com/zackshp" target="_blank">Zack Sheppard</a> and <a href="http://www.twitter.com/dsully360" target="_blank">Daniel Sullivan</a> about <a href="https://stripe.com/" target="_blank">Stripe</a>. Stripe is a really powerful and simplified way to implement a payments infrastructure and checkout functionality into your application.<!--more-->
+In addition to it being easy to add payment forms through Stripe Checkout, it&rsquo;s also completely secure. They have fraud protection, PCI Service Provider Level 1 certification, and optional two-factor authentication. Even if someone does manage to hack into your application, you&rsquo;re never actually storing any of your customer&rsquo;s credit card information. I could go on and on, but that would probably ruin the whole point of showing you the video, right? Take a look below for our presentation on why Stripe is useful, and how we integrated it into <a href="https://github.com/cassidypignatello/laser-spirit">Laser Spirit</a> &ndash; a Rails engine we created as a simplified e-commerce platform to mount onto your host application, a la Shopify or Spree.</p>
+
+<p>Password: <strong>summer2014</strong></p>
+
+<div class="embed-video-container"><iframe src="//player.vimeo.com/video/104331278 "></iframe></div>
+
+
+<p>Thanks for watching!</p>
+
+
+        <hr class="divider-short"/>
+        
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/08/24/what-beer-can-teach-you-about-recursion/" title="Previous Post: What Beer Can Teach You About Recursion">&laquo; Previous: What Beer Can Teach You About Recursion</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/itscassidy"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/cassidypignatello"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/cassidypignatello"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:cassidy.pignatello@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

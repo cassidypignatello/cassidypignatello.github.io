@@ -13,7 +13,7 @@
   <meta name="author" content="Cassidy Pignatello">
 
   
-  <meta name="description" content="Self, the Vagabond of Ruby written Jun 24th, 2014 in Metaprogramming, Ruby, Self A few weeks ago in my Ruby class, we were introduced to the concept &hellip;">
+  <meta name="description" content="Self, the Vagabond of Ruby written Jun 24th, 2014 in Ruby, Self A few weeks ago in my Ruby class, we were introduced to the concept of self. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,7 +64,7 @@
 in
 <span class="categories">
   
-    <a class='category' href='/blog/categories/metaprogramming/'>Metaprogramming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/self/'>Self</a>
+    <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/self/'>Self</a>
   
 </span>
 
@@ -197,6 +197,16 @@ in
 
 <p>Although we replaced the book title with &ldquo;Jitterbug Perfume&rdquo;, it remained set to &ldquo;Still Life With Woodpecker&rdquo; &ndash; which is what we see when we call <code>print_title</code>. That&rsquo;s because the assignment inside <code>replace_title</code> is assigned to a local variable called <code>title</code>, which isn&rsquo;t being used for anything. If we were to change line 5 to <code>self.title = new_title</code>, then the method call would return &ldquo;Jitterbug Perfume&rdquo; as was expected. It&rsquo;s not necessary to use <code>self.title</code> explicitly inside the method <code>print_title</code>, because Ruby is smart enough to know that there&rsquo;s no local variable with that name and will then send <code>self</code> the message <code>title</code>. Remember how I mentioned that a method call always sends a message to a reciever? Well, <code>self</code> can also be defined as an implicit reciever. That is, if you call a method without an explicit recieving object, the method is implicitly called on <code>self</code>.</p>
 
+
+        <hr class="divider-short"/>
+        
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
       </div>
     </div>
   </div>
@@ -235,6 +245,10 @@ in
 
     
     <a href="https://github.com/cassidypignatello"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/cassidypignatello"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
     
 
     
