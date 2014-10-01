@@ -12,4 +12,4 @@ In addition to it being easy to add payment forms through Stripe Checkout, it's 
 Password: <strong>summer2014</strong>
 {% vimeo 104331278 %}
 
-
+Thanks for watching!

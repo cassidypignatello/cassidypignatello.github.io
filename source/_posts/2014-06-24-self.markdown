@@ -3,7 +3,7 @@ layout: post
 title: "Self, the Vagabond of Ruby"
 date: 2014-06-24 20:52:44 -0400
 comments: true
-categories: Self Ruby Metaprogramming
+categories: Self Ruby
 ---
 
 A few weeks ago in my Ruby class, we were introduced to the concept of `self`. This can be particularly challenging to wrap your head around, especially if you're new to programming in general.
